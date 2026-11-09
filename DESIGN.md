@@ -37,28 +37,28 @@ Fonti dei contenuti: esclusivamente i due volantini aziendali. I testi aggiuntiv
   /* Text */
   --text: #142219;               /* titoli e testo forte */
   --text-secondary: #55655a;     /* paragrafi */
-  --text-tertiary: #7a887e;      /* etichette, note */
+  --text-tertiary: #5f6e64;      /* etichette, note */
   --on-dark: #ffffff;            /* titoli su scuro */
   --on-dark-2: #d6e6da;          /* paragrafi su scuro */
   --on-dark-3: #a9c2b0;          /* testo secondario su scuro */
 
   /* Accent */
-  --accent: #2b8a3e;             /* verde marchio: CTA, link, icone */
-  --accent-hover: #237533;
+  --accent: #22783a;             /* verde marchio: CTA, link, icone */
+  --accent-hover: #1b6330;
   --leaf: #79bd44;               /* verde chiaro: dettagli, bordi hover */
   --signal: #f3c316;             /* giallo segnaletica: evidenze su scuro, CTA primaria su hero */
   --signal-hover: #ffd83d;
 
   /* RGB variants for rgba() */
   --dark-rgb: 13, 54, 31;
-  --accent-rgb: 43, 138, 62;
+  --accent-rgb: 34, 120, 58;
   --signal-rgb: 243, 195, 22;
   --ink-rgb: 8, 36, 20;
   --white-rgb: 255, 255, 255;
   --black-rgb: 0, 0, 0;
 
   /* Semantic */
-  --success: #2b8a3e;
+  --success: #22783a;
   --success-bg: #e6f3e3;
   --error: #8a1f1f;
   --error-bg: #fbeaea;
@@ -244,8 +244,8 @@ Nessuna (CSS + JS nativo).
 
 ### Entrance Animation
 ```css
-@keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
-.hero-line { animation: rise .8s cubic-bezier(.16,1,.3,1) both; }
+@keyframes lift { from { transform: translateY(18px); } to { transform: none; } }   /* solo transform: l'opacità ritarderebbe l'LCP */
+.hero-line { animation: lift .8s cubic-bezier(.16,1,.3,1) both; }
 .hero-line:nth-child(2) { animation-delay: .08s; } .hero-line:nth-child(3) { animation-delay: .16s; }
 @keyframes draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }  /* 1969 a contorno */
 ```
